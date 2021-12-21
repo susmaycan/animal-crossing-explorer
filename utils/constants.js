@@ -87,3 +87,26 @@ export const TYPES = {
   FOSSILS: 'fossils',
   ART: 'art '
 }
+
+export const CATEGORIES = [
+  {
+    name: 'fish',
+    url: '/fish'
+  },
+  {
+    name: 'bugs',
+    url: '/bugs'
+  },
+  {
+    name: 'fossils',
+    url: '/fossils'
+  },
+  {
+    name: 'sea_creatures',
+    url: '/sea'
+  },
+  {
+    name: 'art',
+    url: '/art'
+  }
+]

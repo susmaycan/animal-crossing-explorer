@@ -1,5 +1,10 @@
 <template>
-  <section>
+  <section class="box list-container">
+    <slot name="title">
+      <h1 class="title">
+        {{ title | capitalize }}
+      </h1>
+    </slot>
     <Filters :list="list" :show-availability-filters="showAvailabilityFilters" @update-list="filterList" />
     <div v-if="filteredList.length === 0">
       <div class="notification is-danger">
@@ -29,6 +34,10 @@ export default {
     type: {
       type: String,
       required: true
+    },
+    title: {
+      type: String,
+      default: ''
     }
   },
   data () {
@@ -48,3 +57,16 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .list-container {
+    margin: 2em;
+    width: 90%;
+  }
+
+  .title {
+    font-family: 'Nanum Pen Script', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+  }
+</style>

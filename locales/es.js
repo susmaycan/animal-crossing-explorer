@@ -54,5 +54,6 @@ export default {
   speed: 'velocidad',
   no_results: 'no hay resultados',
   all_day: 'todo el día',
-  all_year: 'todo el año'
+  all_year: 'todo el año',
+  explore_categories: 'explora las categorías'
 }

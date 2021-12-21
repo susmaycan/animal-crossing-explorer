@@ -1,6 +1,6 @@
 <template>
-  <Container :title="$t('fossils')">
-    <ListLayout :list="fossilList" :show-availability-filters="false" :type="TYPES.FOSSILS" />
+  <Container>
+    <ListLayout :title="$t('fossils')" :list="fossilList" :show-availability-filters="false" :type="TYPES.FOSSILS" />
   </Container>
 </template>
 

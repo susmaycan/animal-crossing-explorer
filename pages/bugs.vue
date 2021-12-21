@@ -1,6 +1,6 @@
 <template>
-  <Container :title="$t('bugs')">
-    <ListLayout :list="bugList" :type="TYPES.BUGS" />
+  <Container>
+    <ListLayout :title="$t('bugs')" :list="bugList" :type="TYPES.BUGS" />
   </Container>
 </template>
 

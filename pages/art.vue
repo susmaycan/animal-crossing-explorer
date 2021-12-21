@@ -1,7 +1,6 @@
-/* eslint-disable vue/attribute-hyphenation */
 <template>
-  <Container :title="$t('art')">
-    <ListLayout :list="artList" :show-availability-filters="false" :type="TYPES.ART" />
+  <Container>
+    <ListLayout :title="$t('art')" :list="artList" :show-availability-filters="false" :type="TYPES.ART" />
   </Container>
 </template>
 

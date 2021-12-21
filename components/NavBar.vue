@@ -1,12 +1,9 @@
 <template>
   <nav class="navbar p-2" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <div class="navbar-item">
-        <NuxtLink to="/">
-          {{ $t('home') | capitalize }}
-        </NuxtLink>
-      </div>
-
+      <a class="navbar-item" href="/">
+        <img src="~/static/logo.png" alt="Animal crossing logo" width="28" height="28">
+      </a>
       <a
         role="button"
         :class="`navbar-burger ${isBurguerNavBarShown ? 'is-active' :''}`"
@@ -28,9 +25,9 @@
           :key="navBarItem.url"
           class="navbar-item"
         >
-          <NuxtLink :to="navBarItem.url">
+          <a :href="navBarItem.url">
             {{ $t(navBarItem.name) | capitalize }}
-          </NuxtLink>
+          </a>
         </div>
       </div>
       <div class="navbar-end">
@@ -50,32 +47,13 @@
   </nav>
 </template>
 <script>
+import { CATEGORIES } from '@/utils/constants.js'
+
 export default {
   name: 'NavBar',
   data () {
     return {
-      navBarItems: [
-        {
-          name: 'fish',
-          url: '/fish'
-        },
-        {
-          name: 'bugs',
-          url: '/bugs'
-        },
-        {
-          name: 'fossils',
-          url: '/fossils'
-        },
-        {
-          name: 'sea_creatures',
-          url: '/sea'
-        },
-        {
-          name: 'art',
-          url: '/art'
-        }
-      ],
+      navBarItems: CATEGORIES,
       selectedLanguage: this.$i18n.localeProperties?.code || 'EUes',
       isBurguerNavBarShown: false
     }
@@ -96,3 +74,25 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+  a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #20A599;
+    font-weight: 700;
+  }
+
+  select {
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+</style>

@@ -54,5 +54,6 @@ export default {
   speed: 'speed',
   no_results: 'no results',
   all_day: 'all day',
-  all_year: 'all year'
+  all_year: 'all year',
+  explore_categories: 'explore categories'
 }

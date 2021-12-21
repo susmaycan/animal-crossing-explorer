@@ -1,6 +1,6 @@
 <template>
-  <Container :title="$t('sea_creatures')">
-    <ListLayout :list="seaCreatures" :type="TYPES.SEA_CREATURES" />
+  <Container>
+    <ListLayout :title="$t('sea_creatures')" :list="seaCreatures" :type="TYPES.SEA_CREATURES" />
   </Container>
 </template>
 

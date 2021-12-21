@@ -1,6 +1,6 @@
 <template>
-  <Container :title="$t('fish')">
-    <ListLayout :list="fishList" :type="TYPES.FISH" />
+  <Container>
+    <ListLayout :list="fishList" :type="TYPES.FISH" :title="$t('fish')" />
   </Container>
 </template>
 
